@@ -5,15 +5,16 @@ using SQLite;
 
 namespace People.Models
 {
-    [Table("TBL_people")]
+    [Table("T_people")]
+
    public class Person
     {
         //Miembro: Properties
         [PrimaryKey, AutoIncrement]
 
-        public int id { get; send; }
+        public int Id { get; set; }
 
-        [MaxLength(50), Unique]
+        [MaxLength(50)]
 
         public string Name { get; set; }
     }
