@@ -32,7 +32,7 @@ namespace People.Models
             else
             {
                 StatusMessage =
-                    $"¡Registro no insertado!";
+                    "¡Registro no insertado!";
             }
         }
     }
