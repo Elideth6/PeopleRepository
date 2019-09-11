@@ -4,6 +4,7 @@ using System.Text;
 using SQLite;
 using People.Models;
 
+
 namespace People.Models
 {
     public class PersonRepositoryCRUD
@@ -20,6 +21,8 @@ namespace People.Models
         }
         public void CreatePerson(Person newPerson)
         {
+
+
             int result;
             result = conn.Insert(newPerson);
             if (result == 1)
@@ -34,6 +37,11 @@ namespace People.Models
                 StatusMessage =
                     "¡Registro no insertado!";
             }
+        }
+
+        public List<Person> GetAllPeople()
+        {
+            return conn.Table<Person>().ToList();
         }
     }
 }
